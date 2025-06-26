@@ -1,0 +1,113 @@
+.footer {
+  background-color: #d8d8d8;
+  color: #333;
+  padding: 3rem 0;
+  margin-top: auto;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 2rem;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 1.125rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.description {
+  color: #555;
+  margin-bottom: 1rem;
+}
+
+.socialLinks {
+  display: flex;
+  gap: 1rem;
+}
+
+.socialLink {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: var(--card-background);
+  box-shadow: 5px 5px 10px var(--shadow-color),
+    -5px -5px 10px var(--shadow-highlight);
+  transition: all 0.2s ease;
+}
+
+.socialLink:hover {
+  box-shadow: 6px 6px 12px var(--shadow-color),
+    -6px -6px 12px var(--shadow-highlight);
+}
+
+.socialLink:active {
+  box-shadow: inset 3px 3px 6px var(--shadow-color),
+    inset -3px -3px 6px var(--shadow-highlight);
+}
+
+.socialIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #555;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  list-style: none;
+}
+
+.link {
+  color: #555;
+  transition: color 0.2s;
+}
+
+.link:hover {
+  color: var(--primary);
+}
+
+.address {
+  font-style: normal;
+  color: #555;
+}
+
+.contactInfo {
+  margin-top: 0.5rem;
+}
+
+.copyright {
+  margin-top: 3rem;
+  padding-top: 1.5rem;
+  border-top: 1px solid #ccc;
+  text-align: center;
+  color: #555;
+}
+
+@media (min-width: 768px) {
+  .grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (min-width: 1024px) {
+  .grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}

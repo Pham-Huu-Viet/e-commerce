@@ -1,0 +1,141 @@
+:root {
+  /* Colors */
+  --background: #e8e8e8;
+  --foreground: #333;
+  --primary: #6b6ef9;
+  --primary-hover: #5a5ce6;
+  --secondary: #f0f0f3;
+  --card-background: #e8e8e8;
+  --card-foreground: #333;
+  --border: #d1d1d1;
+  --input-background: #e8e8e8;
+  --input-foreground: #333;
+  --shadow-color: rgba(0, 0, 0, 0.1);
+  --shadow-highlight: rgba(255, 255, 255, 0.8);
+  --overlay-background: rgba(0, 0, 0, 0.5);
+  --success: #10b981;
+  --error: #ef4444;
+  --warning: #f59e0b;
+  --info: #3b82f6;
+
+  /* Typography */
+  --font-size-xs: 0.75rem;
+  --font-size-sm: 0.875rem;
+  --font-size-base: 1rem;
+  --font-size-lg: 1.125rem;
+  --font-size-xl: 1.25rem;
+  --font-size-2xl: 1.5rem;
+  --font-size-3xl: 1.875rem;
+  --font-size-4xl: 2.25rem;
+  --font-size-5xl: 3rem;
+
+  /* Font weights */
+  --font-weight-normal: 400;
+  --font-weight-medium: 500;
+  --font-weight-semibold: 600;
+  --font-weight-bold: 700;
+
+  /* Spacing */
+  --spacing-1: 0.25rem;
+  --spacing-2: 0.5rem;
+  --spacing-3: 0.75rem;
+  --spacing-4: 1rem;
+  --spacing-5: 1.25rem;
+  --spacing-6: 1.5rem;
+  --spacing-8: 2rem;
+  --spacing-10: 2.5rem;
+  --spacing-12: 3rem;
+  --spacing-16: 4rem;
+
+  /* Border radius */
+  --radius: 12px;
+  --radius-sm: 6px;
+  --radius-lg: 16px;
+  --radius-full: 9999px;
+}
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  /* overflow-x: hidden; */
+  background-color: var(--background);
+  color: var(--foreground);
+  font-size: var(--font-size-base);
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+.layout {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+/* Neumorphism Styles */
+.neu-flat {
+  background: var(--card-background);
+  box-shadow: 6px 6px 12px var(--shadow-color),
+    -6px -6px 12px var(--shadow-highlight);
+  border-radius: var(--radius);
+}
+
+.neu-pressed {
+  background: var(--card-background);
+  box-shadow: inset 6px 6px 12px var(--shadow-color),
+    inset -6px -6px 12px var(--shadow-highlight);
+  border-radius: var(--radius);
+}
+
+.neu-button {
+  background: var(--card-background);
+  box-shadow: 6px 6px 12px var(--shadow-color),
+    -6px -6px 12px var(--shadow-highlight);
+  border-radius: var(--radius);
+  transition: all 0.2s ease;
+}
+
+.neu-button:hover {
+  box-shadow: 8px 8px 16px var(--shadow-color),
+    -8px -8px 16px var(--shadow-highlight);
+}
+
+.neu-button:active {
+  box-shadow: inset 6px 6px 12px var(--shadow-color),
+    inset -6px -6px 12px var(--shadow-highlight);
+}
+
+/* Utility classes */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Overlay for modals */
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: var(--overlay-background);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 100;
+}

@@ -1,0 +1,280 @@
+.card {
+  position: relative;
+  background: var(--card-background);
+  border-radius: var(--radius);
+  box-shadow: 6px 6px 12px var(--shadow-color), -6px -6px 12px var(--shadow-highlight);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 8px 8px 16px var(--shadow-color), -8px -8px 16px var(--shadow-highlight);
+}
+
+.wishlistButton {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  z-index: 10;
+}
+
+.iconButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2.5rem;
+  height: 2.5rem;
+  border: none;
+  background: var(--card-background);
+  box-shadow: 3px 3px 6px var(--shadow-color), -3px -3px 6px var(--shadow-highlight);
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.iconButton:hover {
+  box-shadow: 4px 4px 8px var(--shadow-color), -4px -4px 8px var(--shadow-highlight);
+}
+
+.iconButton:active,
+.iconButton.active {
+  box-shadow: inset 3px 3px 6px var(--shadow-color), inset -3px -3px 6px var(--shadow-highlight);
+}
+
+.icon {
+  width: 1.25rem;
+  height: 1.25rem;
+  color: #555;
+}
+
+.heartActive {
+  fill: var(--error);
+  color: var(--error);
+}
+
+.imageContainer {
+  cursor: pointer;
+}
+
+.imageWrapper {
+  position: relative;
+  overflow: hidden;
+  aspect-ratio: 1 / 1;
+  border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.card:hover .image {
+  transform: scale(1.05);
+}
+
+.content {
+  display: block;
+  padding: var(--spacing-4);
+  text-decoration: none;
+  color: inherit;
+}
+
+.title {
+  font-size: var(--font-size-base);
+  font-weight: var(--font-weight-medium);
+  color: var(--foreground);
+  margin-bottom: var(--spacing-2);
+}
+
+.price {
+  font-size: var(--font-size-lg);
+  font-weight: var(--font-weight-bold);
+  color: var(--foreground);
+}
+
+.actions {
+  padding: 0 var(--spacing-4) var(--spacing-4);
+}
+
+.button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 2.5rem;
+  border: none;
+  background: var(--card-background);
+  box-shadow: 5px 5px 10px var(--shadow-color), -5px -5px 10px var(--shadow-highlight);
+  border-radius: var(--radius);
+  color: var(--foreground);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.button:hover {
+  box-shadow: 6px 6px 12px var(--shadow-color), -6px -6px 12px var(--shadow-highlight);
+  color: var(--primary);
+}
+
+.button:active {
+  box-shadow: inset 3px 3px 6px var(--shadow-color), inset -3px -3px 6px var(--shadow-highlight);
+}
+
+.buttonIcon {
+  width: 1rem;
+  height: 1rem;
+  margin-right: var(--spacing-2);
+}
+
+/* Popup styles */
+.popup {
+  position: relative;
+  max-width: 800px;
+  width: 90%;
+  background: var(--card-background);
+  border-radius: var(--radius);
+  box-shadow: 10px 10px 20px var(--shadow-color), -10px -10px 20px var(--shadow-highlight);
+  padding: var(--spacing-6);
+  margin: 0 var(--spacing-4);
+}
+
+.closeButton {
+  position: absolute;
+  top: var(--spacing-4);
+  right: var(--spacing-4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 2rem;
+  height: 2rem;
+  border: none;
+  background: var(--card-background);
+  box-shadow: 3px 3px 6px var(--shadow-color), -3px -3px 6px var(--shadow-highlight);
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+}
+
+.closeIcon {
+  width: 1rem;
+  height: 1rem;
+}
+
+.popupContent {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: var(--spacing-6);
+}
+
+.popupImageContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popupImage {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  box-shadow: 5px 5px 10px var(--shadow-color), -5px -5px 10px var(--shadow-highlight);
+}
+
+.popupInfo {
+  display: flex;
+  flex-direction: column;
+}
+
+.popupTitle {
+  font-size: var(--font-size-xl);
+  font-weight: var(--font-weight-bold);
+  margin-bottom: var(--spacing-2);
+}
+
+.popupPrice {
+  font-size: var(--font-size-2xl);
+  font-weight: var(--font-weight-bold);
+  color: var(--primary);
+  margin-bottom: var(--spacing-4);
+}
+
+.popupDescription {
+  margin-bottom: var(--spacing-6);
+}
+
+.popupDescription p {
+  margin-bottom: var(--spacing-2);
+  color: #555;
+}
+
+.popupActions {
+  display: flex;
+  flex-direction: column;
+  gap: var(--spacing-3);
+}
+
+.popupButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  border: none;
+  background: var(--card-background);
+  box-shadow: 5px 5px 10px var(--shadow-color), -5px -5px 10px var(--shadow-highlight);
+  border-radius: var(--radius);
+  color: var(--foreground);
+  font-weight: var(--font-weight-medium);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.popupButton:hover {
+  box-shadow: 6px 6px 12px var(--shadow-color), -6px -6px 12px var(--shadow-highlight);
+  color: var(--primary);
+}
+
+.popupButton:active {
+  box-shadow: inset 3px 3px 6px var(--shadow-color), inset -3px -3px 6px var(--shadow-highlight);
+}
+
+.popupViewButton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 3rem;
+  background: var(--card-background);
+  box-shadow: 5px 5px 10px var(--shadow-color), -5px -5px 10px var(--shadow-highlight);
+  border-radius: var(--radius);
+  color: var(--foreground);
+  font-weight: var(--font-weight-medium);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.popupViewButton:hover {
+  box-shadow: 6px 6px 12px var(--shadow-color), -6px -6px 12px var(--shadow-highlight);
+  color: var(--primary);
+}
+
+.popupViewButton:active {
+  box-shadow: inset 3px 3px 6px var(--shadow-color), inset -3px -3px 6px var(--shadow-highlight);
+}
+
+@media (min-width: 640px) {
+  .popupContent {
+    grid-template-columns: 1fr 2fr;
+  }
+
+  .popupActions {
+    flex-direction: row;
+  }
+
+  .popupButton,
+  .popupViewButton {
+    flex: 1;
+  }
+}
+
